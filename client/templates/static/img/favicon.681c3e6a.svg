@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="512" height="512" version="1.1" viewBox="0 0 135.46666 135.46667" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<title>workman icon</title>
+<metadata>
+<rdf:RDF>
+<cc:Work rdf:about="">
+<dc:format>image/svg+xml</dc:format>
+<dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+<dc:title>workman icon</dc:title>
+<cc:license rdf:resource="http://creativecommons.org/licenses/by/4.0/"/>
+<dc:date>10-03-2019</dc:date>
+<dc:creator>
+<cc:Agent>
+<dc:title>csware inc</dc:title>
+</cc:Agent>
+</dc:creator>
+<dc:rights>
+<cc:Agent>
+<dc:title>All Rights Reserved</dc:title>
+</cc:Agent>
+</dc:rights>
+<dc:publisher>
+<cc:Agent>
+<dc:title>Inkscape</dc:title>
+</cc:Agent>
+</dc:publisher>
+<dc:identifier>mx7717901</dc:identifier>
+<dc:language>en</dc:language>
+</cc:Work>
+<cc:License rdf:about="http://creativecommons.org/licenses/by/4.0/">
+<cc:permits rdf:resource="http://creativecommons.org/ns#Reproduction"/>
+<cc:permits rdf:resource="http://creativecommons.org/ns#Distribution"/>
+<cc:requires rdf:resource="http://creativecommons.org/ns#Notice"/>
+<cc:requires rdf:resource="http://creativecommons.org/ns#Attribution"/>
+<cc:permits rdf:resource="http://creativecommons.org/ns#DerivativeWorks"/>
+</cc:License>
+</rdf:RDF>
+</metadata>
+<g transform="matrix(1.2731 0 0 1.2731 -37.954 -7.2126)" stroke-width="1.2248">
+<path d="m77.244 58.445 19.67 21.02 25.034-40.235 4.6836-8.2297l8.394 0.68095-34.835 60.389h-8.7172l-17.502-28.966z" fill="#00d455"/>
+<path d="m82.778 31.682-25.407 39.512-20.299-23.691-6.5391-0.72236 26.116 45.29 34.84-60.389h-8.6964z" fill="#2a7fff"/>
+</g>
+</svg>
