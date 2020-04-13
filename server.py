@@ -41,10 +41,13 @@ app.add_middleware(
 @app.route('/manifest.json')
 async def web_manifest(req, resp):
     resp.headers["Content-Type"] = "text/cache=manifest"
-    resp.html = app.template(site.webmanifest)
+    resp.html = app.template('manifest.json')
+
 @app.route("/400")
 async def not_found(req, resp):   
     resp.status_code = app.status_codes.HTTP_400
+    #resp.media = {'codes':dir(app.status_codes)}
+
 
 @app.route("/")
 @app.route("/{path}")
