@@ -1,6 +1,7 @@
 import PouchDB from 'pouchdb';
 import axios from 'axios';
 
+
 const db = new PouchDB('wkm_projects')
 const Url = 'http://' + location.hostname + ':5984/wkm_projects/'
 
@@ -31,7 +32,7 @@ export default {
         // GETS
         async getProjects(context){
             
-            const url = Url + '_all_docs?include_docs=true'
+            const url = Url + '_all_docs'//'?include_docs=true'
             axios.get(url).then(response => {
                 console.log(response)
                 context.commit('SET_PROJECTS', response.data.rows)
