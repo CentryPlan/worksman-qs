@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/precache-manifest.96fef5225b5a766ddd72f9fa0b36ca08.js"
+  "/precache-manifest.043a8e84f9c57bef98ce619b8c5f2975.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "worksman-estimator"});
