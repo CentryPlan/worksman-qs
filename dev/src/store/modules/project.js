@@ -1,12 +1,13 @@
 import PouchDB from 'pouchdb';
 import axios from 'axios';
-
+import {Project} from '../models/projectModels'
 
 const db = new PouchDB('wkm_projects')
 const Url = 'http://' + location.hostname + ':5984/wkm_projects/'
 
 export default {
     state: {
+        project: {},
         projects: [],
         conflicts: [],
         projects_count: 0,
@@ -14,6 +15,9 @@ export default {
     },
     mutations: {
         //SETS
+        SET_PROJECT(state, project) {
+            state.project = project
+        },
         SET_PROJECTS(state, projects) {
             state.projects = projects
         },
@@ -32,8 +36,10 @@ export default {
         // GETS
         async getProjects(context){
             
-            const url = Url + '_all_docs'//'?include_docs=true'
-            axios.get(url).then(response => {
+            const url = Url + '_all_docs',//'?include_docs=true'
+                alldocs = Url + '_all_docs?include_docs=true',
+                index = Url + '_design/project-index/_view/user-projects';
+            axios.get(index).then(response => {
                 console.log(response)
                 context.commit('SET_PROJECTS', response.data.rows)
                 context.commit('SET_PROJECTS_COUNT', response.data.total_rows)
@@ -53,9 +59,28 @@ export default {
                 console.log(error)
             })
 
-        }
+        },
+        async getProject(context, id){
+            
+            const url = Url + id + '?include_docs=true',
+                alldocs = Url + '_all_docs?include_docs=true',
+                index = Url + '_design/project-index/_view/user-projects';
+            axios.get(url).then(response => {
+                console.log(response)
+                context.commit('SET_PROJECT',response.data)
+
+               
+            }).catch(error => {
+                console.log(error)
+            })
+
+        },
     },
     getters: {
+        project: state => {
+            return state.project
+
+        },
         projects: state => state.projects,
         projectscount: state => state.projects_count,
         // conflicted projects

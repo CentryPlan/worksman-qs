@@ -13,15 +13,13 @@
     </div><!-- Left User Interface -->  
     <!-- Data Display --> 
     <div class="flex flex-col border border-gray-400 p-5 w-3/4 ml-1 mr-10 mb-5 rounded-md overflow-y-auto">
-      <p class="bg-blue-500 text-2lg text-white font-bold p-3">Projects {{count}}</p>
-      <div class="card bg-gray-100 ">
-        {{projects}}
-        
-      </div>
+     <projectsIndex />
+     
         <div class="projects bg-red-500 mt-10 rounded-lg">
       <p class="bg-white m-5 p-5">CONFLICTING PROJECTS {{ conflictscount }}</p>
       <project v-for="project in conflicts" :project="project" :key="project._id"></project>
     </div>
+    
     </div>
 
   
@@ -33,13 +31,15 @@
 // @ is an alias to /src
 import {mapGetters} from 'vuex'
 import Logo from '@/components/ui/logo.vue'
+import projectsIndex from '@/components/project/projectsIndex.vue'
 
 export default {
   name: 'Home',
-  components: {
-  
-    Logo
+  components: {  
+    Logo,
+    projectsIndex
   },
+  
   mounted() {
     this.$store.dispatch('getProjects')
   },
@@ -53,6 +53,7 @@ export default {
   },
   methods: {
     async loadProjects(){
+      this.$store.dispatch('getProject', 'PD84773')
       
     }
   }
