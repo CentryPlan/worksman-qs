@@ -12,7 +12,7 @@
     "core-js": "^3.6.4",
     "js-schema": "^1.0.1",
     "mailgen": "^2.0.10",
-    "nodemailer": "^6.4.6",
+    "nodemailer": "^6.4.16",
     "objectmodel": "^4.1.0",
     "pouchdb": "^7.2.1",
     "register-service-worker": "^1.7.1",
